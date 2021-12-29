@@ -1,16 +1,53 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@layer components {
+  .btn {
+    @apply capitalize px-8 font-medium active:scale-95 transition duration-200;
+  }
 
-* {
-  box-sizing: border-box;
+  .btn-secondary {
+    @apply shadow-lg shadow-secondary/50 capitalize;
+  }
+
+  .btn-primary {
+    @apply shadow-lg shadow-primary/50 capitalize;
+  }
+
+  .btn-accent {
+    @apply shadow-lg shadow-accent/50 capitalize;
+  }
+
+  .input {
+    @apply focus:ring-1 focus:ring-black;
+  }
+
+  .select {
+    @apply focus:ring-1 focus:ring-black;
+  }
+
+  .input-error {
+    @apply focus:ring-0;
+  }
+
+  img {
+    @apply w-full h-full object-cover object-center;
+  }
+
+  .card {
+    @apply rounded-none bg-base-100 shadow-xl shadow-slate-400/20 text-base-content;
+  }
+
+  .card-body {
+    @apply p-8;
+  }
+
+  .container {
+    @apply max-w-6xl px-5 mx-auto relative;
+  }
+
+  input {
+    @apply input input-bordered;
+  }
 }
