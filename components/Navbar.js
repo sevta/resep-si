@@ -22,9 +22,7 @@ export default function Navbar() {
         <Link href="/template" passHref>
           <div className="link link-hover text-sm font-medium">Template</div>
         </Link>
-        <Link href="/travel" passHref>
-          <div className="link link-hover text-sm font-medium">travel</div>
-        </Link>
+
         <div
           className="link link-hover text-sm font-medium"
           onClick={handleLogout}

@@ -1,5 +1,6 @@
 import CompleteProfile from "components/CompleteProfile";
 import Layout from "components/Layout";
+import LayoutAuth from "components/LayoutAuth";
 import Stat from "components/Stats";
 import { useEffect, useState } from "react";
 
@@ -43,7 +44,7 @@ export default function Homepage() {
     );
 
   return (
-    <Layout>
+    <LayoutAuth>
       <div>
         {createNew ? (
           <CompleteProfile />
@@ -58,6 +59,6 @@ export default function Homepage() {
           </>
         )}
       </div>
-    </Layout>
+    </LayoutAuth>
   );
 }

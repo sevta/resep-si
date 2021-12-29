@@ -31,8 +31,11 @@ export default function Loginpage() {
   }
 
   return (
-    <Layout>
-      <div className="card">
+    <Layout className="bg-base-300">
+      <div className="text-5xl font-bold tracking-tighter flex items-center justify-center">
+        Stravelgo.
+      </div>
+      <div className="card fixed bottom-0 left-0 w-full">
         <div className="card-body p-10">
           <div className="card-title">Loginpage</div>
           <form onSubmit={handleSubmit(onSubmit)}>

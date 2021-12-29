@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Layout from "components/Layout";
+import LayoutAuth from "components/LayoutAuth";
 import { fetcher, STRAPI_URL } from "lib";
 import Link from "next/link";
 import useSWR from "swr";
@@ -12,10 +13,10 @@ export default function TemplatePage() {
 
   console.log("template", templates);
   return (
-    <Layout>
-      <div className="grid grid-cols-4 gap-5">
+    <LayoutAuth>
+      <div className="grid grid-cols-3 gap-5">
         {templates?.data.map((template, index) => (
-          <div className="card rounded-2xl" key={index}>
+          <div className="card image-full rounded-2xl" key={index}>
             <figure>
               <img
                 className="w-full aspect-square"
@@ -48,6 +49,6 @@ export default function TemplatePage() {
           </div>
         ))}
       </div>
-    </Layout>
+    </LayoutAuth>
   );
 }
